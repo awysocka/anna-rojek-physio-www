@@ -4,7 +4,7 @@
   "description": "Webpage for Anna Rojek physiotherapist",
   "main": "\u001b[D\u001b[D\u001b[C\u001b[Cindex.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass scss/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/awysocka/anna-rojek-physio-www/issues"
   },
-  "homepage": "https://github.com/awysocka/anna-rojek-physio-www#readme"
+  "homepage": "https://github.com/awysocka/anna-rojek-physio-www#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }
