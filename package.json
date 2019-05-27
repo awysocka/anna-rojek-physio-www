@@ -1,0 +1,19 @@
+{
+  "name": "anna-rojek-physio-www",
+  "version": "1.0.0",
+  "description": "Webpage for Anna Rojek physiotherapist",
+  "main": "\u001b[D\u001b[D\u001b[C\u001b[Cindex.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awysocka/anna-rojek-physio-www.git"
+  },
+  "author": "Anna Wysocka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awysocka/anna-rojek-physio-www/issues"
+  },
+  "homepage": "https://github.com/awysocka/anna-rojek-physio-www#readme"
+}
