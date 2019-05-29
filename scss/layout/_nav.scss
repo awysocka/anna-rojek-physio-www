@@ -1,0 +1,42 @@
+.navigation {
+
+
+    &__nav {
+        position: fixed;
+        z-index: 1500;
+        background-color: $color-grey-primary-light;
+    }
+
+    &__list {
+        width: 100vw;
+        padding: 3rem 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-grey-primary-dark;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &:active {
+            border-bottom: 4px solid $color-pink-light;
+            padding-bottom: 1rem;
+        }
+    }
+        
+}
