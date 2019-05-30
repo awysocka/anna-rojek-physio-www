@@ -1,18 +1,16 @@
-.navigation {
-
-
-    &__nav {
-        position: fixed;
-        z-index: 1500;
-        background-color: $color-grey-primary-light;
-    }
-
+.nav {
+    
+    position: fixed;
+    z-index: 1500;
+    background-color: $color-grey-primary-light;
+    min-height: 10rem;
+    
     &__list {
         width: 100vw;
-        padding: 3rem 20rem;
+        padding: 2rem 15rem;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         list-style-type: none;
     }
@@ -37,6 +35,5 @@
             border-bottom: 4px solid $color-pink-light;
             padding-bottom: 1rem;
         }
-    }
-        
+    }     
 }
