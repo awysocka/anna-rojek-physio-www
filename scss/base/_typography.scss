@@ -8,7 +8,7 @@ body {
 .heading-primary {
     color: $color-grey-primary-dark;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     padding-bottom: 2rem;
 
     &--main {
@@ -24,13 +24,54 @@ body {
         font-weight: 400;
         letter-spacing: .5rem;
         padding-bottom: 3rem;
-        border-bottom: 4px solid $color-primary;
+        border-bottom: 2.8px solid $color-primary;
     }
+}
+
+.heading-secondary{
+    font-size: 3.6rem;
+    // border-top: 2.8px solid $color-primary;
+    // line-height: 6rem;
+    letter-spacing: .5rem
+}
+
+.heading-tertiary {
+     font-size: 2.8rem;
+     letter-spacing: .3rem;
+     padding-bottom: 2rem;
+     text-transform: uppercase;
+}
+
+.heading-fourth {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
 }
 
 .paragraph {
     font-family: 'Lato',sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     letter-spacing: .1rem;
-    line-height: 2.4rem;
+    line-height: 2rem;
+    min-width: 25rem;
+    
+    &--main {
+        width: 45rem;
+        padding-right: 2rem;
+    }
+
+    &--second {
+        margin-bottom: 1rem;
+    }
+}
+
+.paragraph__section:not(:last-child) {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.card__text {
+    font-family: 'Lato', sans-serif;
 }

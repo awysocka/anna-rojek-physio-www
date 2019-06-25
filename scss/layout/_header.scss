@@ -1,13 +1,13 @@
 .header {
     height: 100vh;
     position: relative;
-    padding: 15rem 0 0 0;
+    padding: 12rem 0 0 0;
     overflow: hidden;
     
     &__container {
         width: 95%;
-        height: 90%;
-        border: 3px solid $color-pink-light;
+        height: 92%;
+        border: 2.8px solid $color-pink-light;
         padding: 0 5rem;
         margin: 0 auto;  
         display: flex;
@@ -19,7 +19,7 @@
 
     &__text {
         width: 45%;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         flex-shrink: 1;
     }
 }

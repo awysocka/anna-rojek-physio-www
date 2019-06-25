@@ -1,0 +1,36 @@
+.contact {
+    height: 100%;
+
+    &__cities {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        // align-items: center;
+        
+    }
+
+    &__city {
+        height: 50rem;
+        width: 48%;
+        padding: 4rem 6rem 4rem 6rem;
+        background-color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-primary, .2);
+       
+    }
+
+    &__city--tarnow, 
+    &__city--krakow {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 30rem;
+
+        
+        // flex: 0 0 calc(45% - 1rem);
+     
+    }
+
+}
+
