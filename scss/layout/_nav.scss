@@ -2,22 +2,38 @@
     width: 100vw;
     position: fixed;
     z-index: 1500;
-    margin: 0 auto;
     background-color: $color-grey-primary-light;
-    min-height: 6rem;
     box-shadow: 0 .5rem 1rem rgba($color-primary, .2);
-    
+    min-height: 7rem;
+    // ...
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__container {
+        display: flex;
+        // justify-content: space-around;
+        // align-items: center;
+        width: 93%;
+        margin: 0 auto;
+        
+    }
+
     &__list {
-        padding: 1.2rem 20rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: center;
         flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: flex-end;
         list-style-type: none;
+        margin-left: auto;
+        
     }
 
     &__item {
-        margin: 1rem;
+        margin: 0 2rem;
     }
 
     &__link {
@@ -36,5 +52,13 @@
             border-bottom: 2.8px solid $color-pink-light;
             padding-bottom: .5rem;
         }
-    }     
+    } 
+    
+    &__logo {
+        height: 4.6rem;
+        padding: .5rem 0;
+
+        
+        
+    }
 }

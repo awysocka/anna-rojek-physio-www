@@ -5,32 +5,42 @@
         width: 75%;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        // align-items: center;
-        
+        margin: 0 auto; 
     }
 
     &__city {
-        height: 50rem;
+        min-height: 90rem;
         width: 48%;
-        padding: 4rem 6rem 4rem 6rem;
+        padding-top: 4rem;
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-       
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
     }
 
     &__city--tarnow, 
     &__city--krakow {
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
+        align-self: center;
         height: 30rem;
-
+        padding: 2rem;
         
-        // flex: 0 0 calc(45% - 1rem);
-     
-    }
+        
+        // align-self: center;
 
+    }
 }
 
+.map {
+    margin-top: 20rem;
+    width: 100%;
+}
+
+.new--line {
+    display: block;
+    
+}
