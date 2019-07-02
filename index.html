@@ -16,15 +16,18 @@
 <!-- Navigation bar -->
 
     <nav class="nav">
-        <div class="nav__container">
-            <div><a href="#"><img src="img/logo AR.png" class="nav__logo"></a></div>
-            <ul class="nav__list" >
-                <!-- <li class="nav__item"><a href="#" class="nav__link">Strona główna</a></li> -->
-                <li class="nav__item"><a href="#about" data-scroll class="nav__link">O mnie</a></li>
-                <li class="nav__item"><a href="#service" data-scroll class="nav__link">Usługi</a></li>
-                <li class="nav__item"><a href="#contact" data-scroll class="nav__link">Kontakt</a></li>
-            </ul>
-        </div>
+        <div><a href="#"><img src="img/logo AR.png" class="logo"></a></div>
+        <button class="hamburger" id="hamburger" aria-label="menu">
+            <span class="hamburger__container" tabindex="-1">
+                <span class="hamburger__bars"></span>
+            </span>
+        </button>
+        <ul class="nav__list" id="nav__list">
+            <!-- <li class="nav__item"><a href="#" class="nav__link">Strona główna</a></li> -->
+            <li><a href="#about" data-scroll class="nav__link">O mnie</a></li>
+            <li><a href="#service" data-scroll class="nav__link">Usługi</a></li>
+            <li><a href="#contact" data-scroll class="nav__link">Kontakt</a></li>
+        </ul>
     </nav>
    
 <!-- Banner -->
@@ -37,13 +40,13 @@
                     <span class="heading-primary--sub">fizjoterapeuta</span>
                 </h1>
                 <p class="paragraph paragraph--main">
-                    &bdquo; Na co dzień pracuję głównie z pacjentami bólowymi oraz paniami z zaburzeniami
+                    &bdquo;Na co dzień pracuję głównie z pacjentami bólowymi oraz paniami z zaburzeniami
                     uroginekologicznymi: z
                     problemami funkcjonalnymi mięśni dna miednicy, kobietami w okresie ciąży, połogu jak również w
                     okresie okołooperacyjnym, pomagając im wrócić do pełnej sprawności.&rdquo;
                 </p>
             </div>
-            <a href="#" class="btn btn--cta">Umów wizytę</a>
+            <a href="#contact" data-scroll class="btn btn--cta">Umów wizytę</a>
         </div>
     </header>
 
@@ -54,15 +57,22 @@
                 <div class="about__text-box">
                     <h2 class="heading-secondary heading-secondary--about u-margin-bottom-small">O mnie</h2>
                     <div class="about__text">
-                        <p class="paragraph paragraph--second u-margin-bottom-medium">
-                            <span class="paragraph__section">Jestem absolwentką Akademii Wychowania Fizycznego w Krakowie,
-                            gdzie ukończyłam kolejno studia licencjackie, magisterskie, a w 2017 uzyskałam tytuł doktora nauk o kulturze fizycznej.</span>
-                            <span class="paragraph__section">W zawodzie fizjoterapeuty pracuję od 2011 roku. Do chwili obecnej
-                                ukończyłam również Szkołę Masażu Leczniczego w Krakowie oraz wiele szkoleń z zakresu
-                            fizjoterapii ortopedycznej, neurologicznej i uroginekologicznej.</span>
-                            <span class="paragraph__section">Znajduję się również na liście 
-                                <a href="https://ptug.pl/wykaz-certyfikowanych-lekarzy-i-fizjoterapeutow/?specjalista=fizjoterapeuta" class="link">Certyfikowanych
-                                    terapeutów Uroginekologicznych Polskiego Towarzystwa Uroginekologicznego.</a></span>
+                        <p class="paragraph paragraph--second">
+                            Jestem absolwentką Akademii Wychowania Fizycznego w Krakowie,
+                            gdzie ukończyłam kolejno studia licencjackie, magisterskie, a w 2017 uzyskałam tytuł doktora
+                            nauk o
+                            kulturze fizycznej.
+                        </p>
+                        <p class="paragraph paragraph--second">W zawodzie fizjoterapeuty pracuję od 2011 roku. Do
+                            chwili obecnej
+                            ukończyłam również Szkołę Masażu Leczniczego w Krakowie oraz wiele szkoleń z zakresu
+                            fizjoterapii ortopedycznej, neurologicznej i uroginekologicznej.
+                        </p>
+                        <p class="paragraph paragraph--second u-margin-bottom-medium">Znajduję się również na liście
+                            <a href="https://ptug.pl/wykaz-certyfikowanych-lekarzy-i-fizjoterapeutow/?specjalista=fizjoterapeuta"
+                                class="link">Certyfikowanych terapeutów Uroginekologicznych Polskiego Towarzystwa
+                                Uroginekologicznego.
+                            </a>
                         </p>
                     </div>
                     <a href="#" id="btn-about-more" class="btn btn--small">więcej</a>

@@ -5,19 +5,33 @@
         width: 75%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0 auto; 
+
+        @include respond(tab-land) {
+            width: 85%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 0 4rem 0 4rem;
+        }
     }
 
     &__city {
-        min-height: 90rem;
-        width: 48%;
         padding-top: 4rem;
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex: 0 0 calc(48% - 1rem);
+
+        @include respond(phone) {
+            flex: 0 0 calc(100% - 1rem);
+            margin-bottom: 4rem;
+        }
         
+
     }
 
     &__city--tarnow, 
@@ -28,6 +42,10 @@
         align-self: center;
         height: 30rem;
         padding: 2rem;
+
+        @include respond(phone) {
+            height: 40rem;
+        }
         
         
         // align-self: center;

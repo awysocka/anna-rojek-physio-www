@@ -10,6 +10,19 @@
         flex-wrap: wrap;
         margin: 0 auto;
         align-items: center;
+
+         @include respond(tab-land) {
+             width: 85%;
+         }
+
+         @include respond(tab-port) {
+             width: 100%;
+             padding: 0 4rem 0 4rem;
+         }
+
+          @include respond(phone) {
+              justify-content: center;
+          }
     }
     
 }
@@ -26,6 +39,10 @@
     background: $color-white;
     transition: all .5s ease;
 
+    @include respond(tab-port) {
+        padding: 1rem;
+    }
+
     &:hover {
         box-shadow: 0 1rem 2rem rgba($color-primary, .2); 
         background-color: $color-pink-light;
@@ -38,8 +55,7 @@
     &__text {
         font-size: 1.8rem; 
         padding-left: 2rem;
-    } 
-    
+    }     
 }
 
 .fas {

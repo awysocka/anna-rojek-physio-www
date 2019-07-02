@@ -17,18 +17,23 @@ document.getElementById('popup-about-content').onclick = function(e) {
   e.stopPropagation();
 };
 
-// jQuery(document).ready(
-//   (function($) {
-//     function scrollToSection(event) {
-//       event.preventDefault();
-//       var $section = $($(this).attr("href"));
-//       $("html, body").animate(
-//         {
-//           scrollTop: $section.offset().top
-//         },
-//         500
-//       );
-//     }
-//     $("[data-scroll]").on("click", scrollToSection);
-//   })(jQuery)
-// );
+//hamburger
+const hamburgerIcon = document.getElementById("hamburger");
+const navList = document.getElementById('nav__list');
+const navLinks = document.getElementsByClassName("nav__link");
+
+// otwarcie i zamknięcie menu po kliknięciu w ikonkę hamburgera
+hamburgerIcon.addEventListener("click", function() {
+    hamburgerIcon.classList.toggle("hamburger--active");
+    navList.classList.toggle("nav__list--open");
+  }
+);
+
+// zamknięcie responsive menu po kliknięciu w link
+for(let navLink of navLinks) {
+    navLink.addEventListener("click", function() {
+        hamburgerIcon.classList.remove("hamburger--active");
+        navList.classList.remove("nav__list--open");
+      }
+    );
+}

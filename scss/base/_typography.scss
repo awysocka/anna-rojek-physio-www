@@ -15,6 +15,7 @@ body {
         letter-spacing: .5rem;
         display: block;
         line-height: 7rem;
+
     }
 
     &--sub {
@@ -23,6 +24,10 @@ body {
         font-weight: 400;
         letter-spacing: .5rem;
         padding-bottom: 3rem;
+
+        @include respond(phone) {
+            letter-spacing: .1rem;
+        }
     }
 }
 
@@ -84,10 +89,19 @@ body {
     &--main {
         width: 45rem;
         padding-right: 2rem;
+        
+        @include respond(phone) {
+             width: 95%;
+             padding-right: 0;
+         }
     }
 
     &--second {
         margin-bottom: 1rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
     }
 
     &--footer {
@@ -95,11 +109,6 @@ body {
         font-family: 'Lato', sans-serif;
         letter-spacing: .1rem;  
     }
-}
-
-.paragraph__section:not(:last-child) {
-    display: inline-block;
-    margin-bottom: 2rem;
 }
 
 .card__text {

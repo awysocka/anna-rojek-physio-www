@@ -4,61 +4,175 @@
     z-index: 1500;
     background-color: $color-grey-primary-light;
     box-shadow: 0 .5rem 1rem rgba($color-primary, .2);
-    min-height: 7rem;
-    // ...
-    padding: 0 4rem;
+    // height: 7rem;
+    padding: 1.2rem 4.6rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    
+    
+
+         @include respond(tab-port) {
+            border-bottom: 0.5rem solid $color-grey-primary-light;
+         }
+
+    
+        &__list {
+            height: auto;
+            list-style-type: none;
+            display: flex;
+            
+    
+            // justify-content: flex-end;
+            // margin-left: auto;
+
+            @include respond(tab-port) {
+
+
+                height: 0;
+                overflow: hidden;
+                display: block;
+                margin: 0 auto;
+                flex:  0 1 100%;
+                text-align: center;
+                transition: all 2s linear;  
+
+                &--open {
+                    height: auto;
+                }
+            }
+        }
+
+            
+
+//             &--visible {
+//                 height: auto;
+//             }
+//     
+
+
+        &__link {
+            &:link,
+            &:visited {
+                display: block;
+                margin: 0 1.4rem 0 1.4rem;
+                text-decoration: none;
+                color: $color-grey-primary-dark;
+                font-size: 1.8rem;
+                font-weight: 500;
+                letter-spacing: .2rem;
+                text-transform: uppercase;
+            }
+
+            &:hover,
+            &:active {
+                // display: block;
+                border-bottom: 2.8px solid $color-pink-light;
+                margin-bottom: -2.8px;
+                cursor: pointer;
+
+                @include respond(tab-port) {
+                    border-bottom: none;
+                    color: $color-pink-light;
+                    margin-bottom: 0px;
+                }
+
+            }
+
+                @include respond(tab-port) {
+                    padding: 1rem;
+                }
+        }
+}
+    
+
+  .logo {
+      display: flex;
+      height: 4.6rem;
+      padding: .5rem 0;
+      
+  }
+
+// Hamburger
+
+.hamburger {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+   
+    
+
+    @include respond(tab-port) {
+        display: block;
+        margin-left: auto;
+    }
+
+    &:focus {
+        & > .hambruger__container {
+            box-shadow: 0 0 2px 2px $color-grey-primary-dark;
+        }
+    }
 
     &__container {
         display: flex;
-        // justify-content: space-around;
-        // align-items: center;
-        width: 93%;
-        margin: 0 auto;
-        
-    }
-
-    &__list {
-        display: flex;
         align-items: center;
-        // justify-content: center;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin-left: auto;
-        
+        position: relative;
+        width: 35px;
+        height: 30px;
     }
 
-    &__item {
-        margin: 0 2rem;
+    &__bars {
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: $color-grey-primary-dark;
+        transition: transform .2s ease-in-out;
+        &:before, &:after {
+            display: block;
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color: $color-grey-primary-dark;
+            content: '';
+        }
+        
+        &:before {
+            top: -12px;
+            transition: top .1s .25s ease-in, transform .22s ease-in-out;
+        }
+
+        &:after {
+            bottom: -12px;
+            transition: bottom .1s .25s ease-in, transform .22s ease-in-out;
+        }
     }
 
-    &__link {
-        &:link,
-        &:visited {
-            text-decoration: none;
-            color: $color-grey-primary-dark;
-            font-size: 1.8rem;
-            font-weight: 500;
-            letter-spacing: .2rem;
-            text-transform: uppercase;
+    &,
+    &__container {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.hamburger--active {
+    .hamburger__bars {
+        transform: rotate(225deg);
+        transition: transform .22s .12s ease-in-out;
+
+        &:before {
+            top: 0;
+            transition: top .1s ease-out;
         }
 
-        &:hover,
-        &:active {
-            border-bottom: 2.8px solid $color-pink-light;
-            padding-bottom: .5rem;
+        &:after {
+            bottom: 0;
+            transform: rotate(-90deg);
+            transition: bottom .1s ease-out, transform .22s .12s ease-in-out
         }
-    } 
-    
-    &__logo {
-        height: 4.6rem;
-        padding: .5rem 0;
-
-        
-        
     }
 }
