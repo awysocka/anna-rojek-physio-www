@@ -28,5 +28,27 @@ body {
     background: $color-grey-primary-light;
 }
 
+section {
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
+
+.link {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: $color-grey-primary-dark;
+        font-weight: 700;
+    }
+
+    &:hover {
+        border-bottom: 2px solid $color-pink-light;
+    }
+}
+
 
 

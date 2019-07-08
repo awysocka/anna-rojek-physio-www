@@ -1,24 +1,36 @@
 .contact {
     height: 100%;
 
-    &__cities {
+    &__container {
         width: 75%;
+        margin: 0 auto;
+
+        @include respond(tab-land) {
+            width: 85%;
+        }  
+
+        @include respond(tab-port) {
+            width: 95%;
+        }
+
+        @include respond(phone) {
+            width: 95%;
+        }
+    }
+
+    .cities {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto; 
 
-        @include respond(tab-land) {
-            width: 85%;
-        }
-
         @include respond(tab-port) {
-            width: 100%;
-            padding: 0 4rem 0 4rem;
+            width: 95%;
+            padding: 0;
         }
     }
 
-    &__city {
+    .city {
         padding-top: 4rem;
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
@@ -27,38 +39,51 @@
         flex: 0 0 calc(48% - 1rem);
 
         @include respond(phone) {
-            flex: 0 0 calc(100% - 1rem);
-            margin-bottom: 4rem;
+            // flex: 0 0 calc(100% - 1rem);
+            flex: 0 0 95%;
+            margin: 0 auto 4rem;
         }
-        
 
-    }
-
-    &__city--tarnow, 
-    &__city--krakow {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        height: 30rem;
-        padding: 2rem;
-
-        @include respond(phone) {
-            height: 40rem;
-        }
-        
-        
-        // align-self: center;
-
-    }
-}
-
-.map {
-    margin-top: 20rem;
-    width: 100%;
-}
-
-.new--line {
-    display: block;
+        &--tarnow, 
+        &--krakow {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            max-height: 28rem;
+            padding: 0 2rem;
     
+            @include respond(phone) {
+                height: 30rem;
+                padding: 0;
+            }
+
+            .new--line {
+                display: block;
+                
+            }
+        }
+    }
+
+    &__list {
+        font-family: 'Lato',sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+        line-height: 2rem;
+        min-width: 25rem;
+        list-style: none;
+        padding-top: 1.4rem;
+
+        li {
+            padding-bottom: .5rem;
+            line-height: 2.4rem;
+        }
+    }
 }
+
+    .map {
+        margin-top: 20rem;
+        width: 100%;
+    }
+
+    

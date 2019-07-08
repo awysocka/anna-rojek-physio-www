@@ -15,15 +15,14 @@
 
 <!-- Navigation bar -->
 
-    <nav class="nav">
-        <div><a href="#"><img src="img/logo AR.png" class="logo"></a></div>
+    <nav class="nav" id="nav">
+        <a href="#"><img src="img/logo AR.png" class="logo" id="logo"></a>
         <button class="hamburger" id="hamburger" aria-label="menu">
             <span class="hamburger__container" tabindex="-1">
                 <span class="hamburger__bars"></span>
             </span>
         </button>
         <ul class="nav__list" id="nav__list">
-            <!-- <li class="nav__item"><a href="#" class="nav__link">Strona główna</a></li> -->
             <li><a href="#about" data-scroll class="nav__link">O mnie</a></li>
             <li><a href="#service" data-scroll class="nav__link">Usługi</a></li>
             <li><a href="#contact" data-scroll class="nav__link">Kontakt</a></li>
@@ -36,7 +35,7 @@
         <div class="header__container">
             <div class="header__text">
                 <h1 class="heading-primary">
-                    <span class="heading-primary--main">Anna Rojek</span>
+                    <span class="heading-primary--main">Anna&nbsp;Rojek</span>
                     <span class="heading-primary--sub">fizjoterapeuta</span>
                 </h1>
                 <p class="paragraph paragraph--main">
@@ -51,12 +50,12 @@
     </header>
 
     <main>
-        <section class="about u-margin-top-huge" id="about">
+        <section class="about" id="about">
             <!-- dodany div container  -->
             <div class="about__container">
                 <div class="about__text-box">
-                    <h2 class="heading-secondary heading-secondary--about u-margin-bottom-small">O mnie</h2>
-                    <div class="about__text">
+                    <h2 class="heading-secondary heading-secondary--about">O mnie</h2>
+                    <div class="text">
                         <p class="paragraph paragraph--second">
                             Jestem absolwentką Akademii Wychowania Fizycznego w Krakowie,
                             gdzie ukończyłam kolejno studia licencjackie, magisterskie, a w 2017 uzyskałam tytuł doktora
@@ -68,9 +67,9 @@
                             ukończyłam również Szkołę Masażu Leczniczego w Krakowie oraz wiele szkoleń z zakresu
                             fizjoterapii ortopedycznej, neurologicznej i uroginekologicznej.
                         </p>
-                        <p class="paragraph paragraph--second u-margin-bottom-medium">Znajduję się również na liście
+                        <p class="paragraph paragraph--second">Znajduję się również na liście
                             <a href="https://ptug.pl/wykaz-certyfikowanych-lekarzy-i-fizjoterapeutow/?specjalista=fizjoterapeuta"
-                                class="link">Certyfikowanych terapeutów Uroginekologicznych Polskiego Towarzystwa
+                                class="link" target="_blank">Certyfikowanych terapeutów Uroginekologicznych Polskiego Towarzystwa
                                 Uroginekologicznego.
                             </a>
                         </p>
@@ -78,104 +77,116 @@
                     <a href="#" id="btn-about-more" class="btn btn--small">więcej</a>
                 </div>
                 <div class="about__img-box">
-                    <img src="img/img_about.jpg" class="about__img">
+                    <img src="img/img_about2.jpg" class="img">
                 </div>
             </div>
         </section>
 
-        <section class="service u-margin-top-huge u-margin-bottom-medium" id="service">
-            <h2 class="heading-secondary u-center-text u-margin-bottom-medium">W Czym mogę Ci pomóc?</h2>
-                <div class="service__cards">
-                    <div class="card">
-                        <i class="fas fa-restroom"></i>
-                        <p class="card__text">Nietrzymanie moczu</p>
-                    </div>
+        <section class="service" id="service">
+                <div class="service__container">
+                    <h2 class="heading-secondary">W Czym mogę Ci pomóc?</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fas fa-restroom"></i>
+                            <p class="card__text">Nietrzymanie moczu</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-venus"></i>
-                        <p class="card__text">Obniżenie narządów miednicy mniejszej</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-venus"></i>
+                            <p class="card__text">Obniżenie narządów miednicy mniejszej</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-female"></i>
-                        <p class="card__text">Zwiększone napięcie mięśni dna miednicy</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-female"></i>
+                            <p class="card__text">Zwiększone napięcie mięśni dna miednicy</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-heart"></i>
-                        <p class="card__text">Problemy bólowe, ból w trakcie stosunku</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-heart"></i>
+                            <p class="card__text">Problemy bólowe, ból w trakcie stosunku</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-hands"></i>
-                        <p class="card__text">DRA – rozejście kresy białej</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-hands"></i>
+                            <p class="card__text">DRA – rozejście kresy białej</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-walking"></i>
-                        <p class="card__text">Bóle kręgosłupa i stawów obwodowych</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-walking"></i>
+                            <p class="card__text">Bóle kręgosłupa i stawów obwodowych</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-hand-paper"></i>
-                        <p class="card__text">Mobilizacja blizn</p>
-                    </div>
+                        <div class="card">
+                            <i class="fas fa-hand-paper"></i>
+                            <p class="card__text">Mobilizacja blizn</p>
+                        </div>
 
-                    <div class="card">
-                        <i class="fas fa-baby"></i>
-                        <p class="card__text">Fizjoterapia w trakcie ciąży i po porodzie</p>
+                        <div class="card">
+                            <i class="fas fa-baby"></i>
+                            <p class="card__text">Fizjoterapia w trakcie ciąży i po porodzie</p>
+                        </div>
                     </div>
                 </div>
         </section>
 
         <div class="img_container"></div>
 
-        <section class="contact u-margin-top-huge u-margin-bottom-huge" id="contact">
-            <h2 class="heading-secondary u-center-text u-margin-bottom-medium">Gdzie przyjmuję?</h2>
-                <div class="contact__cities">
-                    <div class="contact__city">
-                        <h3 class="heading-tertiary u-center-text">Kraków</h3>
-                        <div class="contact__city--krakow u-margin-bottom-small">
-                            <h4 class="heading-fourth"><span class="new--line">Reha Plus</span>Gabinet diagnostyczno –
-                                rehabilitacyjny
-                            </h4>
-                            <p class="paragraph paragraph--second">tel. 12 655 59 09</p>
-                            <p class="paragraph paragraph--second">ul. Łużycka 19, Kraków</p>
-                            <p class="paragraph paragraph--second u-margin-bottom-medium"><a
-                                    href="http://gabinetrehaplus.pl/" class="link">www.gabinetrehaplus.pl</a></p>
-                            <p class="paragraph paragraph--second">Rejestracja:</p>
-                            <p class="paragraph paragraph--second u-margin-bottom-medium">pon. - pt. 8-16</p>
-                            <p class="paragraph paragraph--second">Cennik:</p>
-                            <p class="paragraph paragraph--second">Pierwsza terapia (60min.) 130zł</p>
-                            <p class="paragraph paragraph--second">kolejne (45min.) 100zł</p>
-                            <p class="paragraph paragraph--second">krótka terapia (30min.) 65zł</p>
+        <section class="contact" id="contact">
+                <div class="contact__container">
+                    <h2 class="heading-secondary">Gdzie przyjmuję?</h2>
+                    <div class="cities">
+                        <div class="city">
+                            <h3 class="heading-tertiary">Kraków</h3>
+                            <div class="city--krakow">
+                                <h4 class="heading-fourth"><span class="new--line">Reha Plus</span>Gabinet diagnostyczno –
+                                    rehabilitacyjny
+                                </h4>
+                                <ul class="contact__list">
+                                    <li>tel. 12 655 59 09</li>
+                                    <li>ul. Łużycka 19, Kraków</li>
+                                    <li><a href="http://gabinetrehaplus.pl/" class="link" target="_blank">www.gabinetrehaplus.pl</a></li>
+                                </ul>
+                                <ul class="contact__list">
+                                    <li>Rejestracja:</li>
+                                    <li>pon. - pt. 8-16</li>
+                                </ul>
+                                <ul class="contact__list">
+                                    <li>Cennik:</li>
+                                    <li>Pierwsza terapia (60min.) 130zł</li>
+                                    <li>kolejne (45min.) 100zł</li>
+                                    <li>krótka terapia (30min.) 65zł</li>
+                                </ul>
+                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.7285329230012!2d19.961420315715692!3d50.01644317941782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716434ef30a889f%3A0xe225171c16d75ebf!2zxYF1xbx5Y2thIDE5LCAzMC02NTggS3Jha8Ozdw!5e0!3m2!1spl!2spl!4v1561550268599!5m2!1spl!2spl"
+                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+                            <!-- <a href="#" class="btn btn--small" >więcej</a> -->
                         </div>
-                         <iframe
-                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.7285329230012!2d19.961420315715692!3d50.01644317941782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716434ef30a889f%3A0xe225171c16d75ebf!2zxYF1xbx5Y2thIDE5LCAzMC02NTggS3Jha8Ozdw!5e0!3m2!1spl!2spl!4v1561550268599!5m2!1spl!2spl"
-                             width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
-                        <!-- <a href="#" class="btn btn--small" >więcej</a> -->
-                    </div>
-                    <div class="contact__city">
-                        <h3 class="heading-tertiary u-center-text">Tarnów</h3>
-                        <div class="contact__city--tarnow u-margin-bottom-small">
-                            <h4 class="heading-fourth"><span class="new--line">ReSport</span> Centrum Rehabilitacji </h4>
-                            
-                            <p class="paragraph paragraph--second">tel. 724 003 582</p>
-                            <p class="paragraph paragraph--second">ul. Czerwona 7, Tarnów</p>
-                            <p class="paragraph paragraph--second u-margin-bottom-medium"><a
-                                    href="http://resport.pl/" class="link">www.resport.pl</a></p>
-                            <p class="paragraph paragraph--second">Rejestracja:</p>
-                            <p class="paragraph paragraph--second u-margin-bottom-medium">pon. - pt. 8-18, sob. 9-13</p>
-                            <p class="paragraph paragraph--second">Cennik:</p>
-                            <p class="paragraph paragraph--second">Terapia uroginekologiczna (do 60min.) 80zł</p>
-                            <p class="paragraph paragraph--second">pozostałe terapie:</p>
-                            <p class="paragraph paragraph--second">(30min.) 50zł</p>
-                            <p class="paragraph paragraph--second">(45min.) 75zł</p>
+                        <div class="city">
+                            <h3 class="heading-tertiary">Tarnów</h3>
+                            <div class="city--tarnow">
+                                <h4 class="heading-fourth"><span class="new--line">ReSport</span> Centrum Rehabilitacji </h4>
+                                <ul class="contact__list">
+                                    <li>tel. 724 003 582</li>
+                                    <li>ul. Czerwona 7, Tarnów</li>
+                                    <li><a href="http://resport.pl/" class="link" target="_blank">www.resport.pl</a></li>
+                                </ul>
+                                <ul class="contact__list">
+                                    <li>Rejestracja:</li>
+                                    <li>pon. - pt. 8-18, sob. 9-13</li>
+                                </ul>
+                                <ul class="contact__list">
+                                    <li>Cennik:</li>
+                                    <li>Terapia uroginekologiczna (do 60min.) 80zł</li>
+                                    <li>pozostałe terapie:</li>
+                                    <li>(30min.) 50zł</li>
+                                    <li>(45min.) 75zł</li>
+                                </ul>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.754453958323!2d20.943870215715048!3d49.997212879415436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d84ea88f18517%3A0x3d117f61f3db411a!2sCzerwona+7%2C+33-100+Tarn%C3%B3w!5e0!3m2!1spl!2spl!4v1561550368480!5m2!1spl!2spl"
+                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen
+                                class="map"></iframe>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.754453958323!2d20.943870215715048!3d49.997212879415436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d84ea88f18517%3A0x3d117f61f3db411a!2sCzerwona+7%2C+33-100+Tarn%C3%B3w!5e0!3m2!1spl!2spl!4v1561550368480!5m2!1spl!2spl"
-                            width="400" height="300" frameborder="0" style="border:0" allowfullscreen
-                            class="map"></iframe>
-                        <!-- <a href="#" class="btn btn--small">więcej</a> -->
                     </div>
                 </div>
         </section>
@@ -191,7 +202,7 @@
     <div class="popup" id="popup-about">
         <a href="#" class="popup__close">&times;</a>
         <div class="popup__content" id="popup-about-content">
-            <h2 class="heading-secondary heading-secondary--about u-margin-bottom-small">O mnie</h2>
+            <h2 class="heading-secondary heading-secondary--about">O mnie</h2>
             <div class="popup__text">
                 <p class="paragraph paragraph--second">
                     Jestem absolwentką Akademii Wychowania Fizycznego w Krakowie,
@@ -205,25 +216,25 @@
                 </p>
                 <p class="paragraph paragraph--second">Znajduję się również na liście
                     <a href="https://ptug.pl/wykaz-certyfikowanych-lekarzy-i-fizjoterapeutow/?specjalista=fizjoterapeuta"
-                        class="link">Certyfikowanych terapeutów Uroginekologicznych Polskiego Towarzystwa
+                        class="link" target="_blank">Certyfikowanych terapeutów Uroginekologicznych Polskiego Towarzystwa
                         Uroginekologicznego.
                     </a>
                 </p>
                 <p class="paragraph paragraph--second">Od 2013 roku jestem tłumaczem szkoleń dla
                     fizjoterapeutów w firmie Reha Plus w Krakowie.
                 </p>
-                <p class="paragraph paragraph--second u-margin-bottom-medium">
+                <p class="paragraph paragraph--second">
                     Poza pracą fizjoterapeuty od 2016 roku jestem certyfikowanym nauczycielem Jogi i prowadzę zajęcia w
                     swojej własnej
-                    <a href="http://yogatarnow.pl/" class="link">szkole.</a>
+                    <a href="http://yogatarnow.pl/" class="link" target="_blank">szkole.</a>
                     Ponad to elementy jogi wykorzystuję w terapii swoich pacjentek.
                 </p>
             </div>
             <div class="list_section">
-                <h3 class="paragraph paragraph--second u-margin-bottom-small">Ukończone szkolenia:</h3>
+                <h3 class="heading-tertiary heading-tertiary--popup">Ukończone szkolenia:</h3>
                 <p>
-                    <ul class="paragraph paragraph--second u-margin-bottom-medium">
-                        <h4 class="u-margin-bottom-small">Fizjoterapia w uroginekologii</h4>
+                    <ul class="paragraph paragraph--second">
+                        <h4 class="heading-fourth">Fizjoterapia w uroginekologii</h4>
                         <li class="pop-up--item">DRA rozejście kresy białej - prow. Smantha Gillard</li>
                         <li class="pop-up--item">Nietrzymanie moczu i obniżenie narządów miednicy mniejszej,
                             pessaroterapia
@@ -242,8 +253,8 @@
                     </ul>
                 </p>
                 <p>
-                    <ul class="paragraph paragraph--second u-margin-bottom-medium">
-                        <h4 class="u-margin-bottom-small">Fizjoterapia ortopedyczna</h4>
+                    <ul class="paragraph paragraph--second">
+                        <h4 class="heading-fourth">Fizjoterapia ortopedyczna</h4>
                         <li class="pop-up--item">Terapia Manualna (szkoła niemiecka)– (moduły: OW1, OW2, UW1, UW2, OW3,
                             MFT,
                             moduł Egz. zakończony
@@ -255,8 +266,8 @@
                     </ul>
                 </p>
                 <p>
-                    <ul class="paragraph paragraph--second u-margin-bottom-medium">
-                        <h4 class="u-margin-bottom-small">Fizjoterapia neurologiczna</h4>
+                    <ul class="paragraph paragraph--second">
+                        <h4 class="heading-fourth">Fizjoterapia neurologiczna</h4>
                         <li class="pop-up--item">PNF – podstawowy, rozwijający</li>
                         <li class="pop-up--item">PNF kliniczny – PNF w neurologii</li>
                         <li class="pop-up--item">Funkcjonalna fizjoterapia dorosłych chorych po ogniskowych
@@ -267,8 +278,8 @@
                     </ul>
                 </p>
                 <p>
-                    <ul class="paragraph paragraph--second u-margin-bottom-medium">
-                        <h4 class="u-margin-bottom-small">Inne</h4>
+                    <ul class="paragraph paragraph--second">
+                        <h4 class="heading-fourth">Inne</h4>
                         <li class="pop-up--item">Rehabilitative Ultrasound Imaging (RUSI) – anatomia sonograficzna i
                             sonofeedback w codziennej pracy
                             fizjoterapeuty</li>

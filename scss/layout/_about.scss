@@ -1,75 +1,54 @@
-// .about {
-//     height: 100%;
-//     display: flex;
-//     flex-direction: row-reverse;
-//     justify-content: center;
-//     // overflow: hidden;
-// }
-
-// .about__text-box {
-//     width: 40%;
-//     height: 100%;
-//     padding: 4rem 6rem 4rem 12rem;
-//     box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-//     background-color: $color-white;   
-//     overflow: hidden;
-// }
-
-// .about {
-
-//     &__img-box {
-//     width: 30%;
-//     height: 100%;
-//     z-index: 1000;
-//     margin-right: -6rem;
-//     box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-//     }
-
-//     &__img {
-//         width: 100%;
-//     }
-// }
-
 .about {
     height: 100%;
 
     &__container {
         width: 75%;
+        margin: 0 auto;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center; 
-        margin: 0 auto;
+        flex-wrap: wrap;
         
-         @include respond(tab-land) {
-             width: 85%;
-         }
+        @include respond(tab-land) {
+            width: 85%;
+        }
 
-         @include respond(tab-port) {
-             width: 100%;
-         }
+        @include respond(tab-port) {
+            width: 95%;
+        }
 
+        @include respond(phone) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__text-box {
         flex: 0 0 calc(49.5% - 1rem);
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-        padding: 4rem 6rem 4rem 12rem; 
+        padding: 4rem 4rem 4rem 11rem; 
           
+        @include respond(tab-land) {
+            flex: 0 0 calc(54% - 1rem);
+            padding: 4rem 4rem 4rem 9rem;
+        }
+        
         @include respond(tab-port) {
             flex: 0 0 calc(54% - 1rem);
+            padding: 2.8rem 2.8rem 2.8rem 6rem;
         }
 
-         @include respond(phone) {
+        @include respond(phone) {
+            width: 85vw;
             padding: 4rem;
-            flex: 0 0 calc(90% - 1rem);
-         }
-    }
+        }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
+        .text {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2.4rem;
+        }
     }
 
     &__img-box {
@@ -80,28 +59,20 @@
 
         @include respond(tab-port) {
             flex: 0 0 calc(46% - 1rem);
+            margin-bottom: -18rem;
         }
 
         @include respond(phone) {
-            display: none;
+            margin: 0 auto 2rem;
+        }
+
+        .img {
+            width: 100%;
+            
+            @include respond(phone) {
+                width: 85vw;
+            }
         }
     }
-
-     &__img {
-        width: 100%;  
-    }
 }
 
-.link {
-     &,
-     &:link,
-     &:visited {
-         text-decoration: none;
-         color: $color-grey-primary-dark;
-         font-weight: 700;
-     }
-
-     &:hover {
-         border-bottom: 2px solid $color-pink-light;
-     }
-}

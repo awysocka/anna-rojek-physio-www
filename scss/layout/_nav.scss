@@ -66,7 +66,8 @@
             }
 
             &:hover,
-            &:active {
+            &:active, 
+            &--current {
                 // display: block;
                 border-bottom: 2.8px solid $color-pink-light;
                 margin-bottom: -2.8px;
