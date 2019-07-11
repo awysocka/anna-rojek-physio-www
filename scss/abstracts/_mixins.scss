@@ -8,8 +8,8 @@
 /* MEDIA QUERY MENAGER 
 
 0- 600ph - Phone 
-600- 900px - Tablet portrait
-900-1200px - Tablet landscape
+600- 997px - Tablet portrait
+997-1200px - Tablet landscape
 1200-1800 - Our size
 1800px + - Big desktop
 
@@ -23,7 +23,7 @@ $breakpoint:
 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em) { @content; }
+        @media (max-width: 46em) { @content; }  //37.5
     }
 
     @if $breakpoint == tab-port {

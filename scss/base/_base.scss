@@ -10,17 +10,15 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
-    @include respond(tab-land) {
-        font-size: 56.25%; //1rem =9px 9px/16px=56.25%
-    }
-
-    @include respond(tab-port) {
-        font-size: 50%;
-    }
-
     @include respond(big-desktop) {
         font-size: 75%; 
     }
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem =9px 9px/16px=56.25%
+    }
+    @include respond(tab-port) {
+        font-size: 50%;
+    }  
 }
 
 body {
@@ -31,8 +29,8 @@ body {
 section {
     padding: 8rem 0;
 
-    @include respond(phone) {
-        padding: 6rem 0;
+    &.about {
+        padding: 8rem 0 0 0;
     }
 }
 
@@ -49,6 +47,3 @@ section {
         border-bottom: 2px solid $color-pink-light;
     }
 }
-
-
-

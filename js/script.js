@@ -3,13 +3,13 @@
 const popupAbout = document.getElementById('popup-about');
 const logo = document.getElementById('logo');
 
-// dodawanie klasy 
+// add class 
 document.getElementById('btn-about-more').onclick = function(e) {
     e.preventDefault();
     popupAbout.classList.add('popup--visible');
 };
 
-// usuwanie klasy 
+// remove class
 popupAbout.onclick = function(e) {
   e.preventDefault();
   popupAbout.classList.remove("popup--visible");
@@ -28,14 +28,14 @@ const hamburgerIcon = document.getElementById("hamburger");
 const navList = document.getElementById('nav__list');
 const navLinks = document.getElementsByClassName("nav__link");
 
-// otwarcie i zamknięcie menu po kliknięciu w ikonkę hamburgera
+// open and close menu after 'click' on hamburger
     hamburgerIcon.addEventListener("click", function() {
     hamburgerIcon.classList.toggle("hamburger--active");
     navList.classList.toggle("nav__list--open");
   }
 );
 
-// zamknięcie responsive menu po kliknięciu w link
+// close rwd menu after 'click' link
 const closeMenu = function() {
   hamburgerIcon.classList.remove("hamburger--active");
   navList.classList.remove("nav__list--open");
@@ -69,14 +69,21 @@ window.addEventListener("scroll", event => {
   };
 });
 
-
 // MENU CONTACT
-const menuItems = document.querySelectorAll("#city--krakow", "#city", "#map",  "#city--tarnow");
-const city = document.querySelectorAll("#krakow","#tarnow");
+const cityButtons = document.getElementsByClassName("city");
+const contactList = document.getElementsByClassName('city__containert');
 
-// otwarcie i zamknięcie menu po kliknięciu w ikonkę hamburgera
-    city.addEventListener("click", function() {
-    // hamburgerIcon.classList.toggle("hamburger--active");
-    menuItems.classList.toggle("city--rolled", "map--rolled", "city--krakow--rolled", "city--tarnow--rolled");
-  }
-);
+// open and close contact section
+  for(let cityButton of cityButtons) {
+    cityButton.addEventListener("click", function() {
+      const opened = cityButton.classList.contains('city--open');
+      for(let cityButton of cityButtons) {
+        cityButton.classList.remove('city--open')
+      }
+      if (!opened) {
+        cityButton.classList.add("city--open");
+      }
+    }
+  );
+}
+

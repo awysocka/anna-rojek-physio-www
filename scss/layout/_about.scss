@@ -6,42 +6,33 @@
         margin: 0 auto;
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between; 
         align-items: center;
-        justify-content: center; 
         flex-wrap: wrap;
+        // overflow: hidden;
         
         @include respond(tab-land) {
+            width: 80%;
+        }
+        @include respond(tab-port) {
             width: 85%;
         }
-
-        @include respond(tab-port) {
-            width: 95%;
-        }
-
         @include respond(phone) {
+            width: 90%;
             flex-direction: column-reverse;
         }
     }
 
     &__text-box {
+        height: 100%;
         flex: 0 0 calc(49.5% - 1rem);
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-        padding: 4rem 4rem 4rem 11rem; 
-          
-        @include respond(tab-land) {
-            flex: 0 0 calc(54% - 1rem);
-            padding: 4rem 4rem 4rem 9rem;
-        }
+        padding: 4.2rem;
+        overflow: hidden;
         
         @include respond(tab-port) {
-            flex: 0 0 calc(54% - 1rem);
-            padding: 2.8rem 2.8rem 2.8rem 6rem;
-        }
-
-        @include respond(phone) {
-            width: 85vw;
-            padding: 4rem;
+            padding: 2.4rem;
         }
 
         .text {
@@ -52,27 +43,24 @@
     }
 
     &__img-box {
-        flex: 0 0 calc(49.5% - 1rem);
-        margin-right: -2rem;
-        margin-bottom: -14rem;
+        height: 100%;
+        flex: 0 0 calc(48.5% - 1rem);
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
-
-        @include respond(tab-port) {
-            flex: 0 0 calc(46% - 1rem);
-            margin-bottom: -18rem;
+        overflow: hidden;
+        text-align: center;
+        background-color: $color-white;
+        
+        @include respond(big-desktop) {
+            margin-bottom: 0;
         }
-
         @include respond(phone) {
-            margin: 0 auto 2rem;
+            margin: 0 0 2rem;
+            width: 100%;
         }
 
         .img {
             width: 100%;
-            
-            @include respond(phone) {
-                width: 85vw;
-            }
+            height: auto;
         }
     }
 }
-

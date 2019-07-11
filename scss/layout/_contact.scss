@@ -6,42 +6,66 @@
         margin: 0 auto;
 
         @include respond(tab-land) {
-            width: 85%;
+            width: 80%;
         }  
-
         @include respond(tab-port) {
-            width: 95%;
+            width: 85%;
         }
-
         @include respond(phone) {
-            width: 95%;
+            width: 90%;
         }
     }
 
     .cities {
+        margin: 0 auto; 
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 auto; 
-
-        @include respond(tab-port) {
-            width: 95%;
-            padding: 0;
-        }
     }
 
     .city {
-        padding-top: 4rem;
         background-color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-primary, .2);
         display: flex;
         flex-direction: column;
-        flex: 0 0 calc(48% - 1rem);
+        flex: 0 0 calc(48.5% - 1rem);
+
+        & .heading-tertiary {
+            padding: 4rem 0;
+        }
 
         @include respond(phone) {
-            // flex: 0 0 calc(100% - 1rem);
-            flex: 0 0 95%;
+            flex: 0 0 100%;
             margin: 0 auto 4rem;
+            cursor: pointer;
+  
+            & .heading-tertiary:after {
+                font-family: "Font Awesome 5 Free"; content: "\f107"; /* Unicode character for "plus" sign (+) */
+                font-size: 2.6rem;
+                color: $color-pink-light;
+                margin-left: 1rem;
+            }
+              
+            &--open .heading-tertiary:after {
+            font-family: "Font Awesome 5 Free"; content: "\f106"; /* Unicode character for "minus" sign (-) */
+            }
+
+            & .city__container {
+                display: none;
+            }
+
+            &--open .city__container {
+                padding: 0;
+                display: flex;
+            }  
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            margin-top: -4rem;
         }
 
         &--tarnow, 
@@ -50,23 +74,20 @@
             display: flex;
             flex-direction: column;
             align-self: center;
-            max-height: 28rem;
             padding: 0 2rem;
     
             @include respond(phone) {
-                height: 30rem;
-                padding: 0;
+                padding: 1rem;
             }
 
             .new--line {
-                display: block;
-                
+                display: block; 
             }
         }
     }
 
     &__list {
-        font-family: 'Lato',sans-serif;
+        font-family: $font-lato;
         font-size: 1.6rem;
         letter-spacing: .1rem;
         line-height: 2rem;
@@ -76,14 +97,15 @@
 
         li {
             padding-bottom: .5rem;
-            line-height: 2.4rem;
+            line-height: 1.4;
         }
     }
-}
 
     .map {
-        margin-top: 20rem;
+        margin-top: auto;
         width: 100%;
+        padding-top: 4rem;
+        align-self: flex-end;
     }
-
+}
     

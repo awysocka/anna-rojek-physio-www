@@ -6,7 +6,7 @@
         padding: .6rem 3rem;
         display: inline-block;
         letter-spacing: 0.1rem;
-        font-family: 'Lato',sans-serif;
+        font-family: $font-lato;
         color: $color-grey-primary-dark;
         transition: all .2s ease;        
         cursor: pointer;
@@ -37,7 +37,6 @@
         transition: all .2s ease;
         margin: 0 auto;
         
-
         &:hover {
             border: 1px solid $color-pink-light;
             background-color: $color-pink-light;

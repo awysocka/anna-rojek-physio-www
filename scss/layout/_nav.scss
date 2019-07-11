@@ -4,14 +4,11 @@
     z-index: 1500;
     background-color: $color-grey-primary-light;
     box-shadow: 0 .5rem 1rem rgba($color-primary, .2);
-    // height: 7rem;
     padding: 1.2rem 4.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
-    
 
          @include respond(tab-port) {
             border-bottom: 0.5rem solid $color-grey-primary-light;
@@ -22,13 +19,8 @@
             height: auto;
             list-style-type: none;
             display: flex;
-            
-    
-            // justify-content: flex-end;
-            // margin-left: auto;
 
             @include respond(tab-port) {
-
 
                 height: 0;
                 overflow: hidden;
@@ -44,19 +36,12 @@
             }
         }
 
-            
-
-//             &--visible {
-//                 height: auto;
-//             }
-//     
-
-
         &__link {
             &:link,
             &:visited {
                 display: block;
-                margin: 0 1.4rem 0 1.4rem;
+                margin-left: 1.4rem;
+                margin-right: 1.4rem;
                 text-decoration: none;
                 color: $color-grey-primary-dark;
                 font-size: 1.8rem;
@@ -68,9 +53,8 @@
             &:hover,
             &:active, 
             &--current {
-                // display: block;
-                border-bottom: 2.8px solid $color-pink-light;
                 margin-bottom: -2.8px;
+                border-bottom: 2.8px solid $color-pink-light;
                 cursor: pointer;
 
                 @include respond(tab-port) {
@@ -78,21 +62,17 @@
                     color: $color-pink-light;
                     margin-bottom: 0px;
                 }
-
             }
-
                 @include respond(tab-port) {
                     padding: 1rem;
                 }
         }
 }
-    
 
   .logo {
       display: flex;
       height: 4.6rem;
-      padding: .5rem 0;
-      
+      padding: .5rem 0; 
   }
 
 // Hamburger
@@ -105,8 +85,6 @@
     cursor: pointer;
     display: none;
    
-    
-
     @include respond(tab-port) {
         display: block;
         margin-left: auto;
