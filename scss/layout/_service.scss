@@ -73,10 +73,10 @@
     }
  }
 
-    .img_container {
+    .section--divider {
         height: 35rem;
         background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_2_small.jpg);
+        url(../img/img_divider_small.jpg);
         filter: contrast(150%) grayscale(100%) brightness(0.9);
         background-size: cover;
         background-repeat: no-repeat;
@@ -86,12 +86,12 @@
 
         @include respond(big-desktop) {
             background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_2.jpg);
+        url(../img/img_divider_large.jpg);
         }
 
         @include respond(phone) {
             background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_2_phone.jpg);
+        url(../img/img_divider_phone.jpg);
             height: 25rem;
             width: 100%;
         }
