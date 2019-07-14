@@ -25,7 +25,7 @@
 
     .city {
         background-color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color-primary, .2);
+        @include shadow;
         display: flex;
         flex-direction: column;
         flex: 0 0 calc(48.5% - 1rem);

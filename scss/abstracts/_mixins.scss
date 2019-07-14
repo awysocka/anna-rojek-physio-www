@@ -5,6 +5,10 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin shadow($vertical-length: 1rem) {
+    box-shadow: 0 $vertical-length 2rem rgba($color-primary, .2);
+}
+
 /* MEDIA QUERY MENAGER 
 
 0- 600ph - Phone 
@@ -23,7 +27,7 @@ $breakpoint:
 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 46em) { @content; }  //37.5
+        @media (max-width: 46em) { @content; }
     }
 
     @if $breakpoint == tab-port {
