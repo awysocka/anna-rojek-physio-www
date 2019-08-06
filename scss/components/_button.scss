@@ -3,7 +3,7 @@
     &:link,
     &:visited {
         text-decoration: none;
-        padding: .6rem 3rem;
+        padding: $space-xs $space-l;
         display: inline-block;
         letter-spacing: 0.1rem;
         font-family: $font-lato;
@@ -13,11 +13,11 @@
     }
 
     &--cta {
-        font-size: 1.6rem;
+        font-size: $font-s;
         background-color: $color-pink-light;
         box-shadow: 0 .5rem .4rem rgba($color-primary, .2);
         border: 2px solid $color-pink-light;
-        margin-bottom: 1.2rem;
+        margin-bottom: $space-s;
 
         &:hover {
             transform: translateY(-2px);
@@ -31,7 +31,7 @@
     }
 
     &--small {
-        font-size: 1.4rem;
+        font-size: $font-s;
         border: 1px solid $color-primary;
         background-color: $color-white;
         transition: all .2s ease;

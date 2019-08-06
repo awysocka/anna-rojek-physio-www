@@ -2,22 +2,21 @@
     height: 100%;
 
     &__container {
-        width: 75%;
-        margin: 0 auto;
+        @include container-main;
 
         @include respond(tab-land) {
-            width: 80%;
-        }  
+            @include container-main(80%);
+        }
         @include respond(tab-port) {
-            width: 85%;
+            @include container-main(85%);
         }
         @include respond(phone) {
-            width: 90%;
+            @include container-main(90%);
         }
     }
 
     .cities {
-        margin: 0 auto; 
+        margin: $space-m auto 0; 
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -31,18 +30,18 @@
         flex: 0 0 calc(48.5% - 1rem);
 
         & .heading-tertiary {
-            padding: 4rem 0;
+            padding: $space-xl 0;
         }
 
         @include respond(phone) {
             flex: 0 0 100%;
-            margin: 0 auto 4rem;
+            margin: 0 auto $space-xl;
   
             & .heading-tertiary:after {
                 font-family: "Font Awesome 5 Free"; content: "\f107"; /* Unicode character for "plus" sign (+) */
-                font-size: 2.6rem;
+                font-size: $font-xs + $font-s;
                 color: $color-pink-light;
-                margin-left: 1rem;
+                margin-left: $space-s;
             }
               
             &--open .heading-tertiary:after {
@@ -68,7 +67,7 @@
             flex-direction: column;
             height: 100%;
             overflow: hidden;
-            margin-top: -4rem;
+            margin-top: -$space-xl;
         }
 
         &__description {
@@ -76,10 +75,10 @@
             display: flex;
             flex-direction: column;
             align-self: center;
-            padding: 0 2rem;
+            padding: 0 $space-m;
     
             @include respond(phone) {
-                padding: 1rem;
+                padding: $space-s;
             }
 
             .new--line {
@@ -90,15 +89,15 @@
 
     &__list {
         font-family: $font-lato;
-        font-size: 1.6rem;
+        font-size: $font-s;
         letter-spacing: .1rem;
         line-height: 2rem;
         min-width: 25rem;
         list-style: none;
-        padding-top: 1.4rem;
+        padding-top: $space-s + $space-xs;
 
         li {
-            padding-bottom: .5rem;
+            padding-bottom: $space-xs;
             line-height: 1.4;
         }
     }
@@ -106,7 +105,7 @@
     .map {
         margin-top: auto;
         width: 100%;
-        padding-top: 4rem;
+        padding-top: $space-xl;
         align-self: flex-end;
     }
 }

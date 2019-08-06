@@ -8,10 +8,10 @@ body {
 .heading-primary {
     color: $color-grey-primary-dark;
     text-transform: uppercase;
-    padding-bottom: 2rem;
+    padding-bottom: $space-m;
 
     &--main {
-        font-size: 5rem;
+        font-size: $font-xs*5;
         letter-spacing: .5rem;
         display: block;
         line-height: 1.4;
@@ -23,10 +23,10 @@ body {
 
     &--sub {
         font-family: $font-lato;
-        font-size: 3rem;
+        font-size: $font-xs*3;
         font-weight: $weight-regular;
         letter-spacing: .5rem;
-        padding-bottom: 3rem;
+        padding-bottom: $space-l;
 
         @include respond(phone) {
             letter-spacing: .1rem;
@@ -40,14 +40,14 @@ body {
     width: 8rem;
     height: 2px;
     background-color: $color-primary;
-    margin: .5rem auto; 
+    margin: $space-xs auto; 
 }
 
 .heading-secondary{
-    font-size: 3.6rem;
+    font-size: $font-xs*3;
     letter-spacing: .5rem;
     text-align: center;
-    padding: 0 0 2rem 0;
+    padding: 0 0 $space-m 0;
     
     &--about {
         display: inline-block;
@@ -55,14 +55,14 @@ body {
 }
 
 .heading-tertiary {
-    font-size: 2.8rem;
+    font-size: $font-m;
     letter-spacing: .3rem;
     text-transform: uppercase;
     text-align: center;
 
     &--popup {
-    padding: 1rem 0 1rem 0;
-    font-size: 2rem;
+    padding: $space-s 0;
+    font-size: $font-m;
     font-family: $font-lato;
     }   
 }
@@ -70,19 +70,19 @@ body {
 .heading-fourth {
     font-weight: $weight-bold;
     font-family: $font-lato;
-    font-size: 1.6rem;
+    font-size: $font-s;
     letter-spacing: .1rem;
-    padding: 2rem 0 2rem 0;
+    padding: $space-m 0 $space-m 0;
 }
 
 .new--line {
-    font-size: 2.2rem;
+    font-size: $font-m;
     color: $color-primary;
 }
 
 .paragraph {
     font-family: $font-lato;
-    font-size: 1.6rem;
+    font-size: $font-s;
     letter-spacing: .1rem;
     min-width: 22rem;
 
@@ -96,12 +96,12 @@ body {
         width: 10rem;
         height: 4px;
         background-color: $color-primary;
-        margin-bottom: 2rem;
+        margin-bottom: $space-m;
     }
     
     &--main {
         width: 45rem;
-        padding-right: 2rem;
+        padding-right: $space-m;
         
         @include respond(phone) {
             width: 95%;
@@ -110,15 +110,15 @@ body {
     }
 
     &--second {
-        margin-bottom: 1rem;
+        margin-bottom: $space-s;
 
         @include respond(tab-port) {
-            margin-bottom: 2rem;
+            margin-bottom: $space-m;
         }
     }
 
     &--footer {
-        font-size: 1.4rem;
+        font-size: $font-s;
         font-family: $font-lato;
         letter-spacing: .1rem;  
     }

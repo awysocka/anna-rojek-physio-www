@@ -2,7 +2,11 @@
     text-align: center;
     background-color: $color-grey-primary-dark;
     color: $color-white;
-    padding: 2rem;
+    padding: $space-m;
+
+    .link--footer {
+        color: $color-pink-light; 
+    }
 }
 
 

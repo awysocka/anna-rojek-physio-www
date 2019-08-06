@@ -14,7 +14,7 @@ html {
         font-size: 76%; 
     }
     @include respond(tab-land) {
-        font-size: 56.25%; //1rem =9px 9px/16px=56.25%
+        font-size: 56.25%;
     }
     @include respond(tab-port) {
         font-size: 50%;
@@ -27,10 +27,10 @@ body {
 }
 
 section {
-    padding: 8rem 0;
+    padding: $space-xl*2 0;
 
     &.about {
-        padding: 8rem 0 0 0;
+        padding: $space-xl*2 0 0 0;
     }
 }
 
@@ -42,6 +42,8 @@ section {
         color: $color-grey-primary-dark;
         font-weight: 700;
     }
+
+    
 
     &:hover {
         border-bottom: 2px solid $color-pink-light;

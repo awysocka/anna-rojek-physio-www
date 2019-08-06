@@ -2,17 +2,16 @@
     height: 100%;
     
     &__container {
-        width: 75%; 
-        margin: 0 auto; 
+        @include container-main;
         
         @include respond(tab-land) {
-            width: 80%;
+            @include container-main(80%);
         }
         @include respond(tab-port) {
-            width: 85%;
+            @include container-main(85%);
         }
         @include respond(phone) {
-            width: 90%;
+            @include container-main(90%);
         }
     }
 
@@ -20,8 +19,8 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 auto;
         align-items: center;
+        margin: $space-m auto 0; 
 
         @include respond(tab-port) {
             width: 100%;
@@ -38,14 +37,14 @@
             display: flex;
             align-items: center;
             flex: 0 0 calc(49% - 1rem);
-            padding: 2rem;
+            padding: $space-m;
             margin-bottom: 3rem;
             @include shadow(0.5rem);
             background: $color-white;
             transition: all .5s ease;
     
             @include respond(tab-port) {
-                padding: 1rem;
+                padding: $space-s;
             }
     
             &:hover {
@@ -58,15 +57,15 @@
             }
             
             .fas {
-                width: 8rem;
+                width: 6rem;
                 text-align: center;
-                font-size: 4.2rem;
+                font-size: $font-m*2;
                 color: $color-pink-light;
             }
 
             &__text {
-                font-size: 1.8rem; 
-                padding-left: 1rem;
+                font-size: $font-s; 
+                padding-left: $space-s;
                 letter-spacing: .1rem;
             } 
         }
@@ -75,23 +74,19 @@
 
     .section--divider {
         height: 35rem;
-        background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_divider_small.jpg);
-        filter: contrast(150%) grayscale(100%) brightness(0.9);
+        background-image: url(../img/img_divider_small.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        margin-top: -3rem;
+        margin-top: -$space-l;
 
-        @include respond(big-desktop) {
-            background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_divider_large.jpg);
+        @include respond(big-desktop) { 
+            background-image: url(../img/img_divider_large.jpg);
         }
 
         @include respond(phone) {
-            background-image: linear-gradient(to right top, rgba($color-white, 0.8), rgba($color-grey-primary-light, 0.4), rgba($color-primary, 0.5)),
-        url(../img/img_divider_phone.jpg);
+            background-image: url(../img/img_divider_phone.jpg);
             height: 25rem;
             width: 100%;
         }

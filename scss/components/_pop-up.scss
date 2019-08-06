@@ -5,7 +5,7 @@
    top: 0;
    left: 0;
    background-color: rgba($color-grey-primary-dark, .9);
-   z-index: 9999;
+   z-index: $z-index-popup;
    opacity: 0;
    visibility: hidden;
    transition: all .3s;
@@ -30,7 +30,7 @@
        opacity: 0;
        transform: translate(-50%, -50%) scale(.5);
        transition: all .4s .2s;
-       padding: 4rem;
+       padding: $space-xl;
 
         @include respond(phone) {
             width: 100%;
@@ -39,7 +39,7 @@
    }
 
    &__text {
-       padding-bottom: 2rem;
+       padding-bottom: $space-m;
    }
 
    &__close {
@@ -49,7 +49,7 @@
         position: absolute;
         top: 3rem;
         right: 8rem;
-        font-size: 3rem;
+        font-size: $font-xs*3;
         text-decoration: none;
         display: inline-block;
         transition: all .2s;
@@ -58,9 +58,9 @@
         @include respond(phone) {
             top: 2rem;
             right: 4.6rem;
-            font-size: 4rem;
+            font-size: $font-xs*4;
             color: $color-grey-primary-dark;
-            z-index: 10000;
+            z-index: $z-index-popup-phone;
         }   
     }
         &:hover {
@@ -73,7 +73,7 @@
         margin: 0 auto;
     
         .pop-up--item {
-            padding-bottom: .5rem;
+            padding-bottom: $space-xs;
         }
     }
     
