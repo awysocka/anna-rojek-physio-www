@@ -9,16 +9,17 @@
     "prefix": "postcss dist/css/style.css --use=autoprefixer --map=false --output=dist/css/style.css",
     "cssmin": "cleancss -o dist/css/style.css dist/css/style.css",
     "jsmin": "mkdirp dist/js && terser src/js/script.js --compress --mangle --output dist/js/script.js",
-    "cp:html": "cp src/index.html dist/",
+    "cp:html": "find src -name '*.html' -type f -exec cp {} dist ;",
+    "cp:php": "find src -name '*.php' -type f -exec cp {} dist ;",
     "cp:img": "cp -R src/img/ dist/img/",
+    "cp": "npm run cp:html && npm run cp:php && npm run cp:img",
     "build:css": "npm run scss && npm run prefix && npm run cssmin",
     "build:js": "npm run jsmin",
-    "build": "npm run clean && npm run build:css && npm run build:js && npm run cp:html && npm run cp:img",
-    "watch:css": "onchange \"src/scss/**/*.scss\" -- npm run scss",
-    "watch:js": "onchange \"src/js/*.js\" -- npm run build:js",
-    "watch": "npm-run-all --parallel watch:*",
-    "live": "cd dist && live-server --browser=chrome",
-    "dev": "npm-run-all --parallel watch:* live"
+    "build": "npm run clean && npm run build:css && npm run build:js && npm run cp && echo Finished successfully!",
+
+    "watch:css": "node-sass src/scss/main.scss dist/css/style.css -w",
+    "live": "cd src && live-server --browser=chrome --mount=/css:../dist/css",
+    "dev": "npm-run-all --parallel scss watch:css live"
   },
   "repository": {
     "type": "git",
