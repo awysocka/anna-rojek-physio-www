@@ -4,9 +4,9 @@ Website for Anna Rojek physiotherapist
 ## technologies 
 * html 5
 * css 3
-* node-sass 4.12.0
+* node-sass
 * vanilla js ES6
-* [babel 7.6.0](https://babeljs.io/) 
+* [babel](https://babeljs.io/) 
 
 ## setup
 To clone and run this website, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) and [Live Server](https://www.npmjs.com/package/live-server) installed on your computer. From your command line:
