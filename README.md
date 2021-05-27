@@ -1,7 +1,6 @@
 # anna-rojek-physio-www
 Website for Anna Rojek physiotherapist
 
-![website-mockup](https://github.com/awysocka/anna-rojek-physio-www/blob/master/readme-image/anna-rojek-mockup.jpg)
 
 ## technologies 
 * html 5
