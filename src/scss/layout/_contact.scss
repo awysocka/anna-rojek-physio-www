@@ -27,7 +27,7 @@
         @include shadow;
         display: flex;
         flex-direction: column;
-        flex: 0 0 calc(48.5% - 1rem);
+        flex: 0 0 calc(100% - 1rem);
 
         & .heading-tertiary {
             padding: $space-xl 0;
